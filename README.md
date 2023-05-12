@@ -10,7 +10,7 @@ Manual_scaffold is used for artificial inversion and splicing of contig sequence
 
 
 # Configure file
-It need one configure file, the example format of the file is as follows, in this case, manual_scaffold will reverse contig1 and link it to contig2, it will output : reversed contig2 seq + N*200 + contig1 seq
+It need one configure file, the example format of the file is as follows, in this case, manual_scaffold will reverse contig2 and link it to contig1, it will output : reversed contig2 seq + N*200 + contig1 seq
 
 [input]
 
