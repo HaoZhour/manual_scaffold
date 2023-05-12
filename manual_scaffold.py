@@ -26,11 +26,11 @@ config.read("config.ini")
 inputfilename = config["input"]["inputfilename"]
 merged_header = config["input"]["merged_header"]
 seq_headers = config["input"]["seq_headers"].split()
-reverse_seq_headers = config["reverse"]["reverse_headers"].split()
+reverse_seq_headers = config["reverse"]["reverse_headers"].split() #分开的contig读成列表
 
 
 #combine fasta sequences
-def merge_sequences(inputfilename, merged_header, *seq_headers):
+def merge_sequences(inputfilename, merged_header, *seq_headers,reverse_seq_headers):
     records = list(SeqIO.parse(inputfilename, "fasta"))
     seq_records = []
     for seq_header in seq_headers:
@@ -48,7 +48,7 @@ def merge_sequences(inputfilename, merged_header, *seq_headers):
     with open(outfilename, "w") as output_handle:
         SeqIO.write(merged_seq_record, output_handle, "fasta")
 
-merge_sequences(inputfilename, merged_header, *seq_headers)
+merge_sequences(inputfilename, merged_header, *seq_headers,reverse_seq_headers)
 
 
 
