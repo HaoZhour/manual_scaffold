@@ -9,11 +9,10 @@ outputfile: a combined one scaffold sequences file
 config.ini:
 
 [input]
-inputfilename = 5_misassembly_contig.fa
 merged_header = scaffold_test
-seq_headers = ptg000042l ptg000010l
+seq_headers = contig1 contig2
 [reverse]
-reverse_headers = ptg000042l
+reverse_headers = contig1
 """
 
 from Bio import SeqIO
